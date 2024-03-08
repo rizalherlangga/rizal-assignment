@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* height: 100vh; */
+  background-color: #f4f4f4;
+}
+
+#left-content {
+  flex: 1;
+  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  max-width: 400px;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+input{
+  width: 375px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  box-shadow: 0 0 15px #cecece;
+}
+
+.form p {
+  font-size: 14px;
+  text-decoration: none;
+  text-align: end;
+}
+
+.form > p > a {
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color:  #959CB6;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color :darkgrey;
+}
+
+.sign > p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.sign > p > a{
+  text-decoration: none;
+}
+
+.copyright {
+  display: flex;
+  color:  #959CB6;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.copyright > p {
+  font-size: 12px;
+  text-align: center;
+}
+
+#right-content {
+  flex: 1;
+  max-width: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-size: cover; */
+  /* margin-right: 80px;
+  margin-left: 80px; */
+  padding: 8px;
+  overflow: hidden; /* Menambahkan overflow: hidden agar konten yang melebihi batas tidak muncul */
+}
+
+.card {
+  border-width: 4px;
+  border-radius: 15px;
+  overflow: hidden; /* Menambahkan overflow: hidden agar border-radius berfungsi */
+}
+
+.card > img {
+  width: 100%; /* Gambar mengikuti lebar elemen card */
+  height: auto; /* Agar tinggi disesuaikan untuk menjaga aspek rasio */
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #left-content,
+  #right-content {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+
+  #right-content {
+    order: -1;
+  }
+
+  input {
+    width: 350px; /* Mengubah width menjadi 100% untuk responsivitas pada resolusi kecil */
+    max-width: none; /* Menghapus max-width pada input untuk resolusi kecil */
+  }
+
+  button {
+    width: 100%; /* Mengubah width menjadi 100% untuk responsivitas pada resolusi kecil */
+  }
+}
